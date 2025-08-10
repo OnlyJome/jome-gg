@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "warzone-loadouts"
+    label: "Warzone Loadouts"
+    folder: "content/warzone-loadouts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Weapon, name: weapon, widget: string}
+      - {label: Loadout Type, name: type, widget: select, options: ["Close Range","Long Range","Sniper Support","SMG","AR"]}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Video Embed URL, name: video, widget: string, required: false}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Body (attachments + notes), name: body, widget: markdown}
+  - name: "battlefield-loadouts"
+    label: "Battlefield 6 Loadouts"
+    folder: "content/battlefield-loadouts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Weapon, name: weapon, widget: string}
+      - {label: Role, name: type, widget: select, options: ["Assault","Support","Engineer","Recon","Universal"]}
+      - {label: Description, name: description, widget: text, required: false}
+      - {label: Video Embed URL, name: video, widget: string, required: false}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}
+  - name: "deals"
+    label: "Deals & Codes"
+    folder: "content/deals"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Brand, name: brand, widget: string}
+      - {label: Code, name: code, widget: string}
+      - {label: Link, name: link, widget: string}
+      - {label: Category, name: category, widget: select, options: ["Gear","Peripherals","Energy","Software","Other"]}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Notes, name: body, widget: markdown, required: false}
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Excerpt, name: excerpt, widget: text, required: false}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Body, name: body, widget: markdown}

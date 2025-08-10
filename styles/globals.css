@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-light: #c1e8fb;
+  --brand-dark: #082668;
+  --brand-white: #fefefe;
+}
+
+html, body { height: 100%; background: var(--brand-white); color: #101828; }
+a { color: var(--brand-dark); }
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-semibold;
+}
+.btn-primary {
+  @apply bg-[var(--brand-dark)] text-[var(--brand-white)] hover:opacity-90;
+}
+.btn-secondary {
+  @apply bg-[var(--brand-light)] text-[var(--brand-dark)] hover:opacity-90;
+}
+.section { @apply py-10 md:py-16; }
+.container { @apply max-w-6xl mx-auto px-4; }
+.card { @apply border rounded-lg p-4 bg-white shadow-sm; }

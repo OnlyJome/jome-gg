@@ -1,0 +1,1 @@
+export default function Four(){return (<div className='section'><div className='container'><h1 className='text-3xl font-bold'>Not Found</h1><p>Oops — that route doesn’t exist.</p></div></div>)}
