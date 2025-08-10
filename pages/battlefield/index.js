@@ -6,7 +6,7 @@ export async function getStaticProps() {
   return { props: { items } };
 }
 
-export default function Battlefield 6({ items }) {
+export default function Battlefield6({ items }) {
   return (
     <section className="section">
       <div className="container">
