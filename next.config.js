@@ -2,6 +2,6 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  eslint: {ignoreDuringBuilds:True}
+  eslint: {ignoreDuringBuilds:true}
 };
 module.exports = nextConfig;
